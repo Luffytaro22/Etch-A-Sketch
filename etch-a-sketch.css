@@ -13,6 +13,10 @@ h1{
     margin-bottom: 20px;
     -webkit-text-stroke: 1px skyblue;
 }
+h3{
+    margin: 0;
+    
+}
 #container{
     display: grid;
     grid-template-columns: repeat(16, 10px);
