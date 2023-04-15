@@ -9,6 +9,7 @@ function createDivs(inputValue) {
   for(let i = 1; i <= inputValue*inputValue; i++){
     const div = document.createElement('div');
     div.classList.add('grids');
+    div.style.background = 'white';
     container.appendChild(div);
   }
 }
