@@ -32,6 +32,15 @@ input.addEventListener('change', () => {
 
   
 // evento que activa el cambio de color solo para el elemento actual
+buttonRed.addEventListener('click', () => {
+  trails.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+      if (mouseDown) {
+        div.style.background='red';
+      }
+    });
+  });
+});
     trails.forEach((div) => {
       div.addEventListener('mouseover', () => {
         if (mouseDown) {
