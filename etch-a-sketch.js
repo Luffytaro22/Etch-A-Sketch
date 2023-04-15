@@ -16,6 +16,10 @@ function createDivs(inputValue) {
 
 input.addEventListener('change', () => {
   inputValue = input.valueAsNumber;
+  if(inputValue > 100){
+    alert('ERROR THE NUMBER IS TOO BIG');
+    return;
+  }
   createDivs(inputValue); 
   container.style.gridTemplateColumns = `repeat(${inputValue}, ${500/inputValue}px)`;
   container.style.gridAutoRows = `minmax(${100/inputValue}px, auto)`;
