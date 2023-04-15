@@ -1,6 +1,8 @@
 const input = document.querySelector('input');
 const container = document.querySelector('#container');
 const buttonRed = document.querySelector('#buttonRed');
+const buttonBlue = document.querySelector('#buttonBlue');
+const buttonYellow = document.querySelector('#buttonYellow');
 //Crea los divs dentro del contenedor.
 function createDivs(inputValue) {
   for(let i = 1; i <= inputValue*inputValue; i++){
@@ -37,6 +39,24 @@ buttonRed.addEventListener('click', () => {
     div.addEventListener('mouseover', () => {
       if (mouseDown) {
         div.style.background='red';
+      }
+    });
+  });
+});
+buttonBlue.addEventListener('click', () => {
+  trails.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+      if (mouseDown) {
+        div.style.background='blue';
+      }
+    });
+  });
+});
+buttonYellow.addEventListener('click', () => {
+  trails.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+      if (mouseDown) {
+        div.style.background='yellow';
       }
     });
   });
