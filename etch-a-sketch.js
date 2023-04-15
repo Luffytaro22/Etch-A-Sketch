@@ -1,9 +1,9 @@
 const input = document.querySelector('input');
 const container = document.querySelector('#container');
-let inputValue = 0;
+const buttonRed = document.querySelector('#buttonRed');
 //Crea los divs dentro del contenedor.
 function createDivs(inputValue) {
-  for(let i = 1; i < inputValue*inputValue; i++){
+  for(let i = 1; i <= inputValue*inputValue; i++){
     const div = document.createElement('div');
     div.classList.add('grids');
     container.appendChild(div);
@@ -11,11 +11,8 @@ function createDivs(inputValue) {
 }
 
 input.addEventListener('change', () => {
-  let aux = inputValue;
   inputValue = input.valueAsNumber;
-  createDivs(inputValue);
-  
-
+  createDivs(inputValue); 
   container.style.gridTemplateColumns = `repeat(${inputValue}, ${500/inputValue}px)`;
   container.style.gridAutoRows = `minmax(${100/inputValue}px, auto)`;
 
@@ -33,21 +30,21 @@ input.addEventListener('change', () => {
     mouseDown = false;
   });
 
-  if(inputValue == aux){
-
-  }else{
+  
+// evento que activa el cambio de color solo para el elemento actual
     trails.forEach((div) => {
       div.addEventListener('mouseover', () => {
         if (mouseDown) {
-          div.classList.add('clicked');
+          div.style.background='black';
         }
       });
     });
-  }
-  // evento que activa el cambio de color solo para el elemento actual
-  
-
-  
+//Evento que escucha cada vez que se se altera el input y elimina los divs creados.
+  input.addEventListener('input', () => {
+    trails.forEach((div) => {
+      container.removeChild(div);
+    });
+  });
 
 });
 let clear = document.querySelector('#clear');
