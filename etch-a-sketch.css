@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(16, 10px);
+    grid-auto-rows: minmax(50px, auto);
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    margin-left: 400px;
+    margin-top: 100px;
+    border: 1px solid black;
+}
+div{
+    margin: 0; 
+}
+
+.clicked{
+    background-color: black;
+}
+
+#clear{
+    position:fixed;
+    top: 10%;
+    left: 45%;
+}
+
+
+
