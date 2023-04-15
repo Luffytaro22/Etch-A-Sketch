@@ -3,6 +3,7 @@ const container = document.querySelector('#container');
 const buttonRed = document.querySelector('#buttonRed');
 const buttonBlue = document.querySelector('#buttonBlue');
 const buttonYellow = document.querySelector('#buttonYellow');
+const undo = document.querySelector('#undo');
 //Crea los divs dentro del contenedor.
 function createDivs(inputValue) {
   for(let i = 1; i <= inputValue*inputValue; i++){
@@ -68,6 +69,15 @@ buttonYellow.addEventListener('click', () => {
         }
       });
     });
+  undo.addEventListener('click', () => {
+    trails.forEach((div) => {
+      div.addEventListener('mouseover', () => {
+        if (mouseDown) {
+          div.style.background='white';
+        }
+      });
+    });
+  });
 //Evento que escucha cada vez que se se altera el input y elimina los divs creados.
   input.addEventListener('input', () => {
     trails.forEach((div) => {
