@@ -4,6 +4,14 @@ html{
 body{
     margin: 0;
     background: linear-gradient(175deg,skyblue, aquamarine, aqua, blue);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    color:whitesmoke;
+    font-size: 50px;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px skyblue;
 }
 #container{
     display: grid;
@@ -12,7 +20,7 @@ body{
     width: 500px;
     height: 500px;
     box-sizing: border-box;
-    margin-top: 100px;
+    
     border: 1px solid black;
 }
 div{
@@ -31,10 +39,43 @@ div{
     flex-direction: column;
     gap: 20px;
 }
-
-
-
-
+.container2 input{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+}
+.container2 button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+}
+.container2 button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem rgb(255, 255, 255);
+}
+#buttonRed:hover{
+    box-shadow: 0 0 1rem red;
+}
+#buttonBlue:hover{
+    box-shadow: 0 0 1rem blue;
+}
+#buttonYellow:hover{
+    box-shadow: 0 0 1rem yellow;
+}
+#buttonRed{
+    background-color: red;
+}
+#buttonBlue{
+    background-color: blue;
+}
+#buttonYellow{
+    background-color: yellow;
+}
+#clear{
+    background-color: grey;
+}
+/* Sirve para quitar las flechitas dentro de input */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
