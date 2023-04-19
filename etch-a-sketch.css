@@ -48,6 +48,19 @@ div{
     border-radius: 5px;
     border: none;
 }
+input[type="color"]{
+    padding: 0;
+    background: transparent;
+    width:42%;
+}
+input[type="color"]:hover{
+    cursor: pointer;
+}
+span{
+    font-weight: bold;
+    display: flex;
+    align-items: center;  
+}
 .container2 button{
     padding: 10px 30px;
     border-radius: 5px;
